@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryptor</title>
+    <link rel="icon" href="img/ico-encriptor.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/stylesDark.css">
+
+    <script src="css/script.js" type="text/javascript" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Encriptador de Texto</h1>
+        <label class="switch">
+            <input type="checkbox" id="slider" checked>
+            <span class="slider"></span>
+        </label>
+    </header>
+    <div class="container">
+        <div class="encriptar">
+            <textarea name="texto" class="textarea" id="texto" cols="30" rows="10"
+                placeholder="Ingrese el texto que desea encriptar"></textarea>
+            <div class="terminos">
+                <p>Solo texto en minúscula y sin acentos.</p>
+            </div>
+            <div class="botones">
+                <button class="btn-encriptar" type="button" onclick="encriptar()">
+                    Encriptar
+                </button>
+                <input class="btn-desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+            </div>
+        </div>
+
+        <div class="encriptado">
+            <img src="img/oupus.png" alt="" id="img-encriptado">
+            <div class="mensaje-encriptado" id="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningun mensaje encontrado!</h2>
+                <p id="parrafo">Ingrese el texto que deseas encriptar o desencriptar</p>
+            </div>
+        </div>
+    </div>
+    <!--*Pie de Pagina-->
+    <div class="wrapper">
+        <footer>
+            <small>&copy; Copyright - 2024 | 7codeblue</small>
+            <div class="RedSocial">
+                <a href="httpss://github.com/" target="_blank" rel="noopener noreferrer"
+                    title="Visitar perfil en Github">
+                    <img src="img/github.png" alt="github">
+                </a>
+
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                    title="Visitar perfil en Linkedin">
+                    <img src="img/linkedin.png">
+                </a>
+                <img src="img/logo_AluraOracle.png" alt="linkedin">
+
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="app/app.js"></script>
+</body>
+
+</html>
