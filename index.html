@@ -23,7 +23,10 @@
     <div class="container">
         <div class="encriptar">
             <textarea name="texto" class="textarea" id="texto" cols="30" rows="10"
-                placeholder="Ingrese el texto que desea encriptar"></textarea>
+                placeholder="Ingrese el texto que desea Encriptar"></textarea>
+            <div class="copiartexto">
+                <button id="copyBtn" class="copiar-btn disabled">Copiar</button>
+                </div>
             <div class="terminos">
                 <p>Solo texto en minúscula y sin acentos.</p>
             </div>
@@ -32,6 +35,8 @@
                     Encriptar
                 </button>
                 <input class="btn-desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+
+                <button class="limpiarBtn" id="limpiarBtn">Limpiar</button>
             </div>
         </div>
 
@@ -43,6 +48,7 @@
             </div>
         </div>
     </div>
+    
     <!--*Pie de Pagina-->
     <div class="wrapper">
         <footer>
@@ -63,6 +69,8 @@
 
         </footer>
     </div>
+    <!-- Incluyendo Biblioteca SweetAlert desde un CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="app/app.js"></script>
 </body>

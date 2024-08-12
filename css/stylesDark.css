@@ -106,38 +106,33 @@ input:checked+.slider:before {
 /* text area, button, */
 .container {
     display: flex;
-    justify-content: space-around;
-    position: relative;
-    width: 100%;
-    height: 80vh;
+    justify-content: space-between;
     transition: .8s;
     background-color: var(--background);
+    margin: 4rem auto;
+    /* La primera cantidad es para margen arriba y abajo, la segunda (auto) es para los lados y centra la página */
+    /* A mi me gusta que queda despegado de los bordes, lo puedes cambiar */
 }
 
 .encriptar {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    /*position: absolute;*/
     width: 45%;
     height: 80%;
-    left: 6%;
-    top: 1%;
     transition: .8s;
     background-color: var(--background);
     box-shadow: 0px 24px 32px -8px rgba(2, 246, 63, 0.948);
     border-radius: 32px;
-    flex-direction: column;
 }
 
 .encriptado {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    /*position: absolute;*/
-    flex-direction: column;
     width: 45%;
     height: 80%;
-    top: 1%;
     transition: .8s;
     background-color: var(--background);
     box-shadow: 0px 24px 32px -8px rgba(3, 22, 235, 0.948);
@@ -147,6 +142,7 @@ input:checked+.slider:before {
 .textarea {
     height: 80%;
     font-family: "inter";
+    padding: 1rem;
     font-style: normal;
     color: var(--text);
     font-weight: 400;
@@ -156,7 +152,6 @@ input:checked+.slider:before {
     transition: .8s;
     background-color: var(--background);
     border-radius: 12px;
-    /*padding: 1%;*/
 }
 
 
@@ -175,7 +170,7 @@ input:checked+.slider:before {
     text-align: center;
     align-items: center;
     padding: 0px;
-    gap: 8px;
+    gap: 1px;
     justify-content: center;
     width: 100%;
 }
@@ -200,10 +195,8 @@ input:checked+.slider:before {
     justify-content: center;
     flex-direction: row;
     align-items: flex-end;
-    padding: 1% 0;
+    padding: 3% 2rem;
     left: 12%;
-    bottom: 0;
-
 }
 
 .btn-encriptar {
@@ -236,6 +229,58 @@ input:checked+.slider:before {
     text-align: center;
     color: #fff;
     margin: 5px;
+}
+
+/*Stiles Boton copiar*/
+
+.copiartexto{
+   justify-content: center;
+   align-self: flex-end;
+    }
+
+button.copiar-btn {
+    width: 5rem;
+    top: 10px;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 0.8em;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+    justify-content: flex-end;
+}
+
+button.copiar-btn:hover {
+    opacity: 1;
+}
+
+button.copiar-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+   justify-content: flex-end;
+}
+
+
+/*Boton limpiar*/
+.limpiarBtn {
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 8px;
+    width: 8rem;
+    background-color: #ff4800;
+    border-radius: 10px;
+    font-family: "inter";
+    font-size: 18px;
+    line-height: 19px;
+    text-align: center;
+    color: #fff;
+    margin: 5px;
+
 }
 
 .btn-desencriptar:hover,
@@ -275,6 +320,7 @@ input:checked+.slider:before {
     line-height: 150%;
     text-align: center;
     color: var(--text);
+    margin: 1rem 0;
 }
 
 .encriptado img {
@@ -288,7 +334,6 @@ input:checked+.slider:before {
 .wrapper {
     display: flex;
     flex-direction: column;
-
     box-sizing: border-box;
 }
 
@@ -315,7 +360,7 @@ footer {
 }
 
 .RedSocial a i {
-    font-size: 1.5rem;
+    font-size: 1.5rem; 
 }
 
 /* Responsive design */
@@ -326,9 +371,14 @@ footer {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 10rem;
 
     }
 
+    .textarea {
+        margin-bottom: 0.5rem;
+
+    }
 
     .encriptar {
         width: 95%;
