@@ -1,4 +1,4 @@
-function preDefault(){
+function preDefault() {
   let texto = document.getElementById("texto").value;
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
@@ -40,12 +40,12 @@ function encriptar() {
 
   }
 }
-/*
+
 function desencriptar() {
   let texto = document.getElementById("texto").value;
   let tituloMensaje = document.getElementById("titulo-mensaje");
   let parrafo = document.getElementById("parrafo");
-  let imagen = document.getElementById("desencriptar.png");
+  let imagen = document.getElementById("img-encriptado");
 
   let textoCifrado = texto
     .replace(/enter/gi, "e")
@@ -58,39 +58,43 @@ function desencriptar() {
     document.getElementById("texto").value = textoCifrado;
     tituloMensaje.textContent = "Texto desencriptado con éxito";
     parrafo.textContent = "";
-    imagen.src = "img/oupus.png";
-  } else {
+    imagen.src = "img/desencriptar.png";
+    
+  } else { /*
     imagen.src = ".img/desencriptar.png";
     tituloMensaje.textContent = "Ningún mensaje fue encontrado";
     parrafo.textContent = "Ingresa el texto que deseas encriptar o desencriptar";
     swal("Ooops!", "Debes ingresar un texto", "warning");
+    */
   }
+    
 }
+
 /* Boton de Copiar El contenido del Text Area Encriptar*/
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const copiarBtn = document.getElementById('copyBtn');
   const textoArea = document.getElementById('texto');
-  
+
 
   function actualizarEstadoBoton() {
-      if (textoArea.value.trim() === '') {
-          copiarBtn.disabled = true;
-         } else {
-          copiarBtn.disabled = false;
-                }
+    if (textoArea.value.trim() === '') {
+      copiarBtn.disabled = true;
+    } else {
+      copiarBtn.disabled = false;
+    }
   }
 
   textoArea.addEventListener('input', actualizarEstadoBoton);
 
-  copiarBtn.addEventListener('click', function() {
-      if (textoArea.value.trim() === '') {
-        
-      } else {
-          textoArea.select();
-          document.execCommand('copy');
-          alert("Texto copiado al portapapeles!");
-      }
+  copiarBtn.addEventListener('click', function () {
+    if (textoArea.value.trim() === '') {
+
+    } else {
+      textoArea.select();
+      document.execCommand('copy');
+      alert("Texto copiado al portapapeles!");
+    }
   });
 
   // Inicializa el estado del botón
@@ -99,12 +103,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*Boton Limpiar = contenido del TextArea Encriptar*/
 
-document.addEventListener("DOMContentLoaded", function () {
-  const limpiarBtn = document.getElementById('limpiarBtn');
-  const textoArea = document.getElementById('texto');
+  document.addEventListener("DOMContentLoaded",
+    function () {
+    const limpiarBtn = document.getElementById('limpiarBtn');
+    const textoArea = document.getElementById('texto');
     limpiarBtn.addEventListener('click', function () {
-    textoArea.value = '';
-    
+      textoArea.value = '';
+
+    });
+
   });
-  preDefault();
-});
+
